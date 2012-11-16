@@ -37,6 +37,8 @@ sub patch_data {
 1;
 # ABSTRACT: Do not use Storable
 
+=for Pod::Coverage ^(patch_data)$
+
 =head1 SYNOPSIS
 
  use HTTP::Headers::Patch::DontUseStorable;
@@ -44,10 +46,10 @@ sub patch_data {
 
 =head1 DESCRIPTION
 
-HTTP::Headers (6.06) tries to load L<Storable> (2.39) and use its dclone()
-method. As of this writing, Storable still does not support serializing Regexp
-objects, so HTTP::Headers/L<HTTP::Message> croaks when fed data with Regexp
-objects.
+HTTP::Headers (6.05 as of this writing) tries to load L<Storable> (2.39 as of
+this writing) and use its dclone() method. Since Storable still does not support
+serializing Regexp objects, HTTP::Headers/L<HTTP::Message> croaks when fed data
+with Regexp objects.
 
 This patch avoids using Storable and clone using the alternative method.
 
