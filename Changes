@@ -1,5 +1,13 @@
 Revision history for HTTP-Headers-Patch-DontUseStorable
 
+0.02    2012-11-17 (SHARYANTO)
+
+        [FIXES]
+
+        - Avoid error 'Prototype mismatch: sub HTTP::Headers::clone: none vs
+          ($)' during global destruction.
+
+
 0.01    2012-11-17 (SHARYANTO)
 
         First release.
