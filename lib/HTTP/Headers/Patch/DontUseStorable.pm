@@ -12,13 +12,12 @@ use base qw(Module::Patch);
 
 our %config;
 
-# the version not using Storable's dclone
-my $p_clone = sub {
+sub _clone($) {
     my $self = shift;
     my $clone = HTTP::Headers->new;
     $self->scan(sub { $clone->push_header(@_);} );
     $clone;
-};
+}
 
 sub patch_data {
     return {
@@ -28,7 +27,7 @@ sub patch_data {
                 action => 'replace',
                 mod_version => qr/^6\.0.+/,
                 sub_name => 'clone',
-                code => $p_clone,
+                code => \&_clone,
             },
         ],
     };
