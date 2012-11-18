@@ -63,9 +63,11 @@ workaround for current Storable's deficiencies.
 
 =head2 Shouldn't you add STORABLE_{freeze,thaw} methods to Regexp instead?
 
-Yes, that's also one possible solution, albeit with slightly more work. There's
-an old distribution, L<Regexp::Copy> (last release is 0.06 in 2003, at the time
-of this writing) which does this, but last time I tried it no longer works.
+Yes, that's also one possible solution with the advantage of making Storable
+work with Regexp object everywhere, albeit with slightly more work for what I
+needed to accomplish (i.e. make L<Finance::Bank::ID::Mandiri> work). There's an
+old distribution, L<Regexp::Copy> (last release is 0.06 in 2003, at the time of
+this writing) which does this, but last time I tried it no longer works.
 
 
 =head1 SEE ALSO
