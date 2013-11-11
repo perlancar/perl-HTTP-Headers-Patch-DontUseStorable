@@ -2,7 +2,7 @@ Revision history for HTTP-Headers-Patch-DontUseStorable
 
 0.03    2012-11-18 (SHARYANTO)
 
-        No functional changes. Add FAQ entries.
+        - No functional changes. Add FAQ entries.
 
 
 0.02    2012-11-17 (SHARYANTO)
@@ -15,4 +15,4 @@ Revision history for HTTP-Headers-Patch-DontUseStorable
 
 0.01    2012-11-17 (SHARYANTO)
 
-        First release.
+        - First release.
