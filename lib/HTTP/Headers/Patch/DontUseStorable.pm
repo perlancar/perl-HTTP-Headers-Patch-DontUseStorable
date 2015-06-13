@@ -1,5 +1,8 @@
 package HTTP::Headers::Patch::DontUseStorable;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 no warnings;
@@ -7,8 +10,6 @@ no warnings;
 
 use Module::Patch 0.12 qw();
 use base qw(Module::Patch);
-
-# VERSION
 
 our %config;
 
@@ -68,6 +69,12 @@ work with Regexp object everywhere, albeit with slightly more work for what I
 needed to accomplish (i.e. make L<Finance::Bank::ID::Mandiri> work). There's an
 old distribution, L<Regexp::Copy> (last release is 0.06 in 2003, at the time of
 this writing) which does this, but last time I tried it no longer works.
+
+=head2 Why would an HTTP::Headers object contain a Regexp object in the first place? Shouldn't it only contain strings (and arrays/hashes of strings)?
+
+True. This might be a bug with the client code (e.g. in my module which uses
+this patch, L<Finance::Bank::ID::Mandiri>). I haven't investigated further
+though and this is the stop-gap solution.
 
 
 =head1 SEE ALSO
