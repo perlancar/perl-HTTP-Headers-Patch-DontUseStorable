@@ -1,3 +1,11 @@
+0.05    2017-04-19 (PERLANCAR)
+
+        - No functional changes.
+
+        - [doc] Update FAQ entry about using Storable_{freeze,thaw} which no
+          longer works with 5.12+ (thanks, Slaven) [RT#120460].
+
+
 0.04    2015-11-04 (PERLANCAR)
 
         - Update HTTP::Headers version (>= 6.10).
