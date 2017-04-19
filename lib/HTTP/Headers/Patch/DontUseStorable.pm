@@ -46,7 +46,7 @@ sub patch_data {
 
 =head1 DESCRIPTION
 
-HTTP::Headers (6.05 as of this writing) tries to load L<Storable> (2.39 as of
+L<HTTP::Headers> (6.11 as of this writing) tries to load L<Storable> (2.56 as of
 this writing) and use its dclone() method. Since Storable still does not support
 serializing Regexp objects, HTTP::Headers/L<HTTP::Message> croaks when fed data
 with Regexp objects.
@@ -64,11 +64,7 @@ workaround for current Storable's deficiencies.
 
 =head2 Shouldn't you add STORABLE_{freeze,thaw} methods to Regexp instead?
 
-Yes, that's also one possible solution with the advantage of making Storable
-work with Regexp object everywhere, albeit with slightly more work for what I
-needed to accomplish (i.e. make L<Finance::Bank::ID::Mandiri> work). There's an
-old distribution, L<Regexp::Copy> (last release is 0.06 in 2003, at the time of
-this writing) which does this, but last time I tried it no longer works.
+This no longer works with newer Perls (5.12 and later).
 
 =head2 Why would an HTTP::Headers object contain a Regexp object in the first place? Shouldn't it only contain strings (and arrays/hashes of strings)?
 
