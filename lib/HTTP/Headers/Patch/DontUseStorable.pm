@@ -1,14 +1,15 @@
 package HTTP::Headers::Patch::DontUseStorable;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
 use strict;
 no warnings;
-#use Log::Any '$log';
 
-use Module::Patch 0.12 qw();
+use Module::Patch ();
 use base qw(Module::Patch);
 
 our %config;

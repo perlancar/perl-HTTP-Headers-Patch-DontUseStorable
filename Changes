@@ -1,3 +1,11 @@
+0.060   2020-02-03  Released-By: PERLANCAR; Urgency: medium
+
+	- No functional changes.
+
+	- Mark deprecated as Storable already supports Regexp objects since
+	  3.08.
+
+
 0.05    2017-04-19  Released-By: PERLANCAR
 
         - No functional changes.
