@@ -35,7 +35,7 @@ sub patch_data {
 }
 
 1;
-# ABSTRACT: Do not use Storable
+# ABSTRACT: (DEPRECATED) Do not use Storable
 
 =for Pod::Coverage ^(patch_data)$
 
@@ -45,6 +45,9 @@ sub patch_data {
 
 
 =head1 DESCRIPTION
+
+B<UPDATE 2020-02-03:> As of Storable 3.08, freeze/thaw/dclone support Regexp
+objects. I'm deprecating this module.
 
 L<HTTP::Headers> (6.11 as of this writing) tries to load L<Storable> (2.56 as of
 this writing) and use its dclone() method. Since Storable still does not support
