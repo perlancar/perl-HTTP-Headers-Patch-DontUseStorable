@@ -27,7 +27,7 @@ sub patch_data {
         patches => [
             {
                 action => 'replace',
-                mod_version => qr/^6\.[01].+/,
+                mod_version => qr/^6\.[012].+/,
                 sub_name => 'clone',
                 code => \&_clone,
             },
