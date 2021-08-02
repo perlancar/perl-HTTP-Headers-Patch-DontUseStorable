@@ -2,3 +2,4 @@ HTTP-Headers-Patch-DontUseStorable-*
 .build
 *~
 nytprof*
+.DS_Store
